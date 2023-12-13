@@ -1,0 +1,182 @@
+body{
+    background-color: #f9fafe;
+}
+
+.container-fluid{
+    margin: 0px 245px 0px 180px;
+}
+#btnmenu, #btnAcceder, #btnCompar{
+    display: flex;
+    background-color: #103fb5;
+    border-color: #103fb5;
+    color: white;
+    width: 115px;
+    height: 40px;
+    text-align: center;
+    margin: 0px 10px !important;
+}
+.me-2 {
+    width: 315px;
+}
+nav{
+    background-color: #002c9b;
+}
+nav svg{
+    margin-top: 5px;
+}
+.carousel-item img{
+    width: 700px;
+    height: 350px;
+}
+.logo {
+        width: 115px;
+        height: 40px;
+}
+
+.Search{
+    background-color: #FFa41c;
+    border-color: #FFa41c;
+    border-radius: 8%;
+    color: white;
+    margin: 0px 0px 0px -5px;
+}
+.categoria{
+    display: flex;
+    margin: 20px 70px ;
+}
+.categoria-item{
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    margin: 0px 10px;
+}
+.categoria-item p{
+    position: absolute;
+    width: 100px;
+    top: 90px;
+    left: 10px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.pestana{
+    margin-left: 30px;
+}
+.container{
+    display: block;
+    padding: 0px 30px 0px 40px;
+}
+#card-content{
+    margin: 10px 0px;
+    height: 252px;
+    box-shadow: rgba(0,0, 0, 0.1) 5px 5px;
+}
+#items nav{
+    margin: 0px 0px;
+}
+.contdia{
+    background-color: rgba(172, 255, 47, 0.623);
+    border-radius: 10px;
+    text-align: center;
+}
+#publicacion{
+    left: 490px;
+    position: absolute;
+    display: flex;
+}
+
+#btnpublic{
+    margin: 0px 0px 0px 225px;
+}
+.cuerpo{
+    display: flex;
+}
+#content-text{
+    margin: -30px 0px -30px -26px !important ;
+}
+
+.card-body {
+    padding: 50px 0px 0px 25px;
+}
+.temcardimg{
+    width: 300px;
+    height: 250px;
+    padding: -20px;
+}
+.card-btn{
+    position: absolute;
+    bottom: 40px;
+    right: 2px;
+}
+#items img{
+    margin: 30px 0px;
+}
+.derecha {
+    padding: 0px 20px;
+}
+.logotienda{
+    width: 150px;
+    border-radius: 15%;
+    margin: 0px 0px 0px 40px;
+}
+#itemstienda{
+    width: 340px;
+    margin: 20px 0px;
+}
+.cuponera{
+    text-align: center;
+    background-color: #e6eff2;
+    border-radius: 4%;
+    margin-top: 30px;
+    width: 350px;
+}
+.tiendas{
+    text-align: center;
+    background-color: #e6eff2;
+    border-radius: 4%;
+    margin-top: 30px;
+    width: 350px;
+}
+.category{
+    background-color: #103fb5;
+    text-align: center;
+    height: 55px;
+}
+#carousel{
+    margin: 0px 40px;
+}
+.btn{
+    background-color: #0071dc;
+    border-color: #0071dc;
+    color: white;
+    width: 160px;
+    margin: 10px -10px;
+}
+.btn a{
+    color: white;
+}
+#flecha {
+    background-color: #0071dc;
+    border-color: #0071dc;
+    color: white;
+    width: 50px;
+    height: 40px;
+    margin: 8px 0px;
+}
+.col {
+    flex-grow: 0 !important;
+}
+#btncategory{
+    margin: 0px 100px;
+}
+
+
+
+
+
+
+
+
+
+

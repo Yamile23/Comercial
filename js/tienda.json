@@ -1,0 +1,20 @@
+[
+    {
+        "id": "01",
+        "titulo": "Fair Play",
+        "imagen": "img/fairplaylogo.png",
+        "link":"https://www.fairplay.com.bo/"
+    },
+    {
+        "id": "02",
+        "titulo": "Dismac",
+        "imagen": "img/dismaclogo.png",
+        "link":"https://www.dismac.com.bo/"
+    },
+    {
+        "id": "03",
+        "titulo": "Cansa",
+        "imagen": "img/cansalogo.png",
+        "link":"https://www.camsa.com.bo/"
+    }
+]

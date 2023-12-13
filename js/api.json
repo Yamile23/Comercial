@@ -1,0 +1,45 @@
+[
+    
+    {
+        "id": "02",
+        "titulo": "Dismac",
+        "imagen": "img/dismac.png",
+        "categoria": {
+            "nombre": "Electrodomesticos",
+            "id": "01"
+        },
+        "detalle": "¿𝗟𝗶𝘀𝘁𝗼 𝗽𝗮𝗿𝗮 𝗮𝗰𝘁𝘂𝗮𝗹𝗶𝘇𝗮𝗿 𝘁𝘂𝘀 𝗲𝗾𝘂𝗶𝗽𝗼𝘀 𝗼 𝗲𝘀𝘁𝗿𝗲𝗻𝗮𝗿 𝗮𝗾𝘂𝗲𝗹𝗹𝗼 𝗾𝘂𝗲 𝘁𝗮𝗻𝘁𝗼 𝗾𝘂𝗶𝗲𝗿𝗲𝘀?¡Cyber Fest es tu oportunidad, ahorra hasta un 40% en una amplia gama de productos!"
+        ,"link":"https://www.dismac.com.bo/cyber.html"
+        ,"publicacion":"2023-11-28"
+    ,"finalizacion":"2023-11-30"
+    ,"promo":true
+    },
+    {
+        "id": "03",
+        "titulo": "Fair play",
+        "imagen": "img/fairplay.png",
+        "categoria": {
+            "nombre": "Calsado",
+            "id": "02"
+        },
+        "detalle": "¡Llego la semana más esperada del año! ¡Black Friday en Fair Play con hasta el 40% de descuento en tus compras! Visita nuestras tiendas a nivel nacional para aprovechar estos increíbles descuentos."
+        ,"link":"https://www.fairplay.com.bo/"
+        ,"publicacion":"2023-12-01"
+    ,"finalizacion":"2023-12-28"
+    ,"promo":false
+    },{
+        "id": "01",
+        "titulo": "Cansa",
+        "imagen": "img/cansa.png",
+        "categoria": {
+            "nombre": "Electrodomesticos",
+            "id": "01"
+        },
+        "detalle": "Empezó nuestro Cyber Week Ingresa a nuestra página web y mira nuestras ofertas hasta el 50% de descuento, ¡aprovecha y ahorra!"
+        ,"link":"https://www.camsa.com.bo/230?map=productClusterIds&page=2"
+        ,"publicacion":"2023-11-25"
+    ,"finalizacion":"2023-12-25"
+    ,"promo":false
+    }
+    
+]
