@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+model Task{
+  id Int @id @default(autoincrement())
+  nombre String
+  detalle String
+}
+
+model Empresa{
+  id Int @id @default(autoincrement())
+  nombre String
+  link String
+  logo String
+  detalle String
+  createIn DateTime @default(now())
+  upDate DateTime @default(now())
+}
+
+model Publicacion{
+  id Int @id @default(autoincrement())
+  titulo String
+  detalle String
+  arte String
+  link String
+  createIn DateTime @default(now())
+  finalpublic DateTime
+  catalogo String
+  galeria String
+  tipo Boolean
+  id_category Int
+  id_empresa Int
+  
+}
