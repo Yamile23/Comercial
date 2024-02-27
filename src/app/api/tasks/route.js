@@ -8,12 +8,13 @@ export async function GET(){
 }
 
 export async function POST(request){
-    const {nombre,detalle} = await request.json()
-    console.log(nombre,detalle)
+    const {nombre,detalle,arte} = await request.json()
+    console.log(nombre,detalle,arte)
     const newTask= await prisma.task.create({
         data:{
             nombre:nombre,
-            detalle:detalle
+            detalle:detalle,
+            arte:arte
         },
     });
     return NextResponse.json(newTask)

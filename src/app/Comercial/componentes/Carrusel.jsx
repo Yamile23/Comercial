@@ -1,50 +1,58 @@
-import React from 'react'
-export default function Carrusel() {
+'use client'
+
+import React from 'react';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import Image from 'next/image';
+
+async function loadCarrusel() {
+
+  const res = await fetch('http://localhost:3000/api/carrusel', {cache: 'no-store'})
+  const data = await res.json()
+  //console.log(data)
+  return data
+}
+
+async function Carrusel() {
+  const carrusel = await loadCarrusel();
   return (
+    <div className='carrusel'>
+      <Swiper
+    modules={[Navigation, Pagination,Autoplay, A11y]}
+    loop ={true}
+    autoplay={{
+      delay: 4000,
+      disableOnInteraction: false
+  }}
+    spaceBetween={100}
+    slidesPerView={1}
+    navigation
+    pagination={{ clickable: true }}
+   // onSwiper={(swiper) => console.log(swiper)}
+   // onSlideChange={() => console.log('slide change')}
     
-    <section>
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-innerImg">
-          <div class="carousel-item active">
-            <img src="/img/modelo3.png" class="d-block w-100" alt="..."/>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>El regalo perfecto</h5>
-              <p>Descrubre las increibles ofertas y descuentos exclusivos para encontrar el reglao ideal!</p>
-              <button class="btn btn-primary" type="submit">Registrate Gratis</button>
+    >
+      {carrusel.map((carrusel) => (
+       <SwiperSlide key={carrusel.id}>
+            <img src={carrusel.arte} alt="img"/>
+            <div className='textCarrusel'>
+              <h5>{carrusel.titulo}</h5>
+              <p>{carrusel.detalle}</p>
+              <button class="btn btn-success" type="submit">Suscribir</button>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="/img/modelo1.png" class="d-block w-100" alt="..."/>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Black friday</h5>
-              <p>Descuentos exclusivos, encontraras todo para ti y tu familia</p>
-              <button class="btn btn-primary" type="submit">Registrate Gratis</button>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="/img/modelo2.png" class="d-block w-100" alt="..."/>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>El regalo perfecto</h5>
-              <p>Descrubre las increibles ofertas y descuentos exclusivos para encontrar el reglao ideal!</p>
-              <button class="btn btn-primary" type="submit">Registrate Gratis</button>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
+          </SwiperSlide>
+          ))}
+    </Swiper>
+    </div>
+    
     
   );
 }
+export default Carrusel

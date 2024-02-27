@@ -9,6 +9,8 @@ function Publicacion() {
     const router = useRouter();
     const parmas = useParams();
     const [Lista, setLista] = useState([]);
+    var aux="";
+
     useEffect(() => {
         const getTodos = async () => {
             const res = await fetch('http://localhost:3000/api/publicaciones', { cache: 'no-store' })
@@ -44,11 +46,12 @@ function Publicacion() {
                                         <h5 class="card-title">{tasks.titulo}</h5>
                                         <p class="card-text" id="detalle">{tasks.detalle}</p>
                                         <div class="contdia">
+                                            
                                             <p class="card-text"><small class="text-body-secondary" id="promo">{format(tasks.finalpublic, 'dd/MM/yyyy')}</small></p>
                                         </div>
                                         <div class="card-btn">
-                                            <a href="#" class="btn btn-primary" id="btncatalogo">Ver Catalogo</a>
-                                            <a href={tasks.link} class="btn btn-primary" id="btnpublic">Ver Oferta</a>
+                                            <a href="#" class="btn btn-success" id="btncatalogo">Ver Catalogo</a>
+                                            <a href={tasks.link} class="btn btn-success" id="btnpublic">Ver Oferta</a>
                                         </div>
                                     </div>
                                 </div>

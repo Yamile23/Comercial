@@ -4,7 +4,7 @@ async function loadCategory() {
 
   const res = await fetch('http://localhost:3000/api/tasks', {cache: 'no-store'})
   const data = await res.json()
-  console.log(data)
+  //console.log(data)
   return data
 }
 async function Categorias () {
@@ -26,4 +26,4 @@ async function Categorias () {
           </section>
     );
           }
-export default Categorias;
+export default Categorias

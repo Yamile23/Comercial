@@ -1,6 +1,5 @@
-import FormCategory from "./Componentes/FormCategory";
-import FormEmpresa from "./Componentes/FormEmpresa";
-import FormPublic from "./Componentes/FormPublic";
+
+import Menu from "./Componentes/Menu";
 
 export default function RootLayout({ children }) {
   return (
@@ -8,9 +7,13 @@ export default function RootLayout({ children }) {
   <head>
   </head>
       <body>
-        <FormEmpresa/>
-        
+        <div className="title">
+          <h2>Administracion de Contenido</h2>
+        </div>
+        <div className="admin">
+        <Menu/>
         {children}
+        </div>
         </body>
     </html>
   )

@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
   </head>
       <body>
         <Navbar/>
-        <Categorias/>
         <Carrusel/>
         <GaleryCatag/>
         <div className='cuerpo'>

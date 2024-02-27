@@ -2,13 +2,13 @@ import { NextResponse } from "next/server"
 import { prisma } from "@/app/libs/prisma"
 
 export async function GET(request, {params}){
-    console.log(params.id)
+    //console.log(params.id)
     const publicacion = await prisma.publicacion.findUnique({
         where:{
             id:Number(params.id)
         }
     })
-     console.log(publicacion)
+     //console.log(publicacion)
     return NextResponse.json(publicacion)
 }
 
@@ -32,7 +32,7 @@ export async function DELETE(request, {params}){
                 id:Number(params.id)
             }
         })
-        console.log(publicRemoved)
+        //console.log(publicRemoved)
         return NextResponse.json("Eliminado "+ params.id);
     }catch(error){
         return NextResponse.json("no existe Id");
